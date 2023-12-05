@@ -13,7 +13,7 @@ composer() {
 
 	mv composer.phar $LOCAL
 
-	echo "export PATH=\$PATH:$LOCALPHP" >> $HOME/.bashrc
+	echo "export PATH=\$PATH:$LOCAL" >> $HOME/.bashrc
 
 	sudo sed -Ei 's/;extension=pdo_pgsql/extension=pdo_pgsql/g;s/;extension=pgsql/extension=pgsql/g' /etc/php/8.1/apache2/php.ini /etc/php/8.1/cli/php.ini
 }
